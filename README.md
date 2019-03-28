@@ -15,4 +15,6 @@ repository for dotfiles(.vimrc and related files.)
 2. `sh ./install.sh`
 
 ### git clone
-1. 
+1. `cd ~`
+2. `git clone https://github.com/cagalliorb/dotfiles`
+3. `sh dotfilesLink.sh`
