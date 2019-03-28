@@ -4,7 +4,7 @@ assuming the installation of zsh
 
 ## installation
 ### install dein(https://github.com/Shougo/dein.vim)
-1. `mkdir -p ~/.vim/bundle`
+1. `mkdir -p ~/.vim/dein`
         
 2. `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh`
 
