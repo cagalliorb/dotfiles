@@ -17,7 +17,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('vim-airline/vim-airline')
   call dein#add('scrooloose/nerdtree')
-	"call dein#add('cohama/lexima.vim')
+	call dein#add('lazywei/vim-matlab')
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev':'a1b5108fd' })
   " Required:
@@ -82,7 +82,6 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'lazywei/vim-matlab'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
