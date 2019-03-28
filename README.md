@@ -8,7 +8,7 @@ assuming the installation of zsh
         
 2. `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh`
 
-3. `sh installer.sh ~/.vim/bundle`
+3. `sh installer.sh ~/.vim/dein`
 
 ### install NeoBundle(https://github.com/Shougo/neobundle.vim)
 1. `curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh`
