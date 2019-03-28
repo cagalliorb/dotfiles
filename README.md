@@ -1,10 +1,11 @@
 # dotfiles
 repository for dotfiles(.vimrc, .bash_prifile etc...)
 
-1. installation
+# installation
     1. install dein
     
-        `mkdir -p ~/.vim/bundle`
+        1. `mkdir -p ~/.vim/bundle`
         
-        `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh sh installer.sh ~/.vim/bundle`
-2.
+        2. `curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh sh installer.sh ~/.vim/bundle`
+    2. install NeoBundle
+ 
