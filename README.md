@@ -9,7 +9,7 @@ repository for dotfiles(.vimrc, .bash_prifile etc...)
 
 3. `sh installer.sh ~/.vim/bundle`
 
-### install NeoBundle
+### install NeoBundle(https://github.com/Shougo/neobundle.vim)
 1. `curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh`
 
 2. `sh ./install.sh`
