@@ -1,5 +1,6 @@
 # dotfiles
 repository for dotfiles(.vimrc and related files.)
+assuming the installation of zsh
 
 ## installation
 ### install dein(https://github.com/Shougo/dein.vim)
