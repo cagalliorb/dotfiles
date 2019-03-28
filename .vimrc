@@ -3,13 +3,13 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 " Required:
-set runtimepath+=/Users/hirotaka/.vim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 " Required:
-if dein#load_state('/Users/hirotaka/.vim/dein')
-  call dein#begin('/Users/hirotaka/.vim/dein')
-  " Let dein manage dein
+if dein#load_state('~/.vim/dein')
+	call dein#begin('~/.vim/dein')
+	" Let dein manage dein
   " Required:
-  call dein#add('/Users/hirotaka/.vim/dein/repos/github.com/Shougo/dein.vim')
+	call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
   " Add or remove your plugins here
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/neosnippet.vim')
@@ -17,27 +17,27 @@ if dein#load_state('/Users/hirotaka/.vim/dein')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('vim-airline/vim-airline')
   call dein#add('scrooloose/nerdtree')
+	call dein#add('cohama/lexima.vim')
   " You can specify revision/branch/tag.
-  "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+  "call dein#add('Shougo/deol.nvim', { 'rev':'a1b5108fd' })
   " Required:
   call dein#end()
   call dein#save_state()
 endif
 " Required:
-filetype plugin indent on
-syntax enable
+" filetype plugin indent on
+  syntax enable
 " If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+  if dein#check_install()
+    call dein#install()
+  endif
 "/**********end dein Scripts**********/"
 
 
 
 
-
 "/**********begin dein settings**********/"
-"neocomplete and neosnippet settings"
+" neocomplete and neosnippet settings"
 " Vim起動時にneocompleteを有効にする
 let g:neocomplete#enable_at_startup = 1
 " smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
@@ -46,15 +46,15 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#min_keyword_length = 3
 " 区切り文字まで補完する
 let g:neocomplete#enable_auto_delimiter = 1
-" 1文字目の入力から補完のポップアップを表示
+" " 1文字目の入力から補完のポップアップを表示
 let g:neocomplete#auto_completion_start_length = 1
 " バックスペースで補完のポップアップを閉じる
 inoremap <expr><BS> neocomplete#smart_close_popup()."<C-h>"
-" エンターキーで補完候補の確定. スニペットの展開もエンターキーで確定
+" " エンターキーで補完候補の確定. スニペットの展開もエンターキーで確定
 imap <expr><CR> neosnippet#expandable() ? "<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "<C-y>" : "<CR>"
-" タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ
+" " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ
 imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
-"vim-clang-format settings"
+" vim-clang-format settings"
 autocmd FileType c ClangFormatAutoEnable
 autocmd FileType cpp ClangFormatAutoEnable
 "nerdtree settings"
@@ -67,23 +67,43 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 
-
-"/**********begin NeoBundle settings**********/"
-if has('vim_starting')
-   " 初回起動時のみruntimepathにneobundleのパスを指定する
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
+"NeoBundle Scripts-----------------------------
+if &compatible
+	set nocompatible               " Be iMproved
 endif
-" NeoBundleを初期化
-call neobundle#begin(expand('~/.vim/bundle/'))
-" インストールするプラグインをここに記述
-"NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'Shougo/vimfiler'
+
+" Required:
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'lazywei/vim-matlab'
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
 call neobundle#end()
-"起動時に自動的にまだインストールされてないものをチェック
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
 NeoBundleCheck
-"/**********end NeoBundle settings**********/"
+"End NeoBundle Scripts-------------------------
 
 
 
@@ -157,8 +177,8 @@ set clipboard=unnamed,autoselect
 
 "/*****文字コードの設定*****/"
 "set fileencoding=utf-8 " 保存時の文字コード
-set fileencoding=sjis
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 読み込み時の文字コードの自動判別. 左側が優先される
+set fileencoding=utf-8
+"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 
@@ -200,8 +220,8 @@ endif
 " Tab文字を半角スペースにする
 "set expandtab
 set autoindent " 改行時に前の行のインデントを継続する
-set tabstop=4 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set shiftwidth=4 " 行頭でのTab文字の表示幅
+set tabstop=2 " 行頭以外のTab文字の表示幅（スペースいくつ分）
+set shiftwidth=2 " 行頭でのTab文字の表示幅
 "タブは>>-,行末のスペースは---で,改行位置は↲ で表示
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
@@ -223,3 +243,6 @@ if has('syntax')
     augroup END
     call ZenkakuSpace()
 endif
+
+"verilog enabling jump between blocks"
+:source $VIMRUNTIME/macros/matchit.vim
