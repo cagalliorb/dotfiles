@@ -216,7 +216,7 @@ endif
 "/verilog enabling jump between blocks/
 :source $VIMRUNTIME/macros/matchit.vim
 
-" completion () {} []]
+" completion () {} []
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
