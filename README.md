@@ -11,9 +11,9 @@ assuming the installation of zsh
 3. `sh installer.sh ~/.vim/dein`
 
 ### install NeoBundle(https://github.com/Shougo/neobundle.vim)
-1. `curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh`
+1. `mkdir ~/.vim/bundle`
 
-2. `sh ./install.sh`
+2. `git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
 
 ### oh-my-zsh
 1. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
