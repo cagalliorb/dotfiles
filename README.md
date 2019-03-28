@@ -1,5 +1,5 @@
 # dotfiles
-repository for dotfiles(.vimrc, .bash_prifile etc...)
+repository for dotfiles(.vimrc and related files.)
 
 ## installation
 ### install dein(https://github.com/Shougo/dein.vim)
