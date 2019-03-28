@@ -1,6 +1,6 @@
-"/**********begin dein Scripts**********/"
+"/begin dein Scripts/
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 " Required:
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
@@ -28,12 +28,12 @@ endif
 " filetype plugin indent on
   syntax enable
 " If you want to install not installed plugins on startup.
-  if dein#check_install()
-    call dein#install()
-  endif
-"/**********end dein Scripts**********/"
+if dein#check_install()
+  call dein#install()
+endif
+"/end dein Scripts/
 
-"/**********begin dein settings**********/"
+"/begin dein settings/
 " neocomplete and neosnippet settings"
 " Vim起動時にneocompleteを有効にする
 let g:neocomplete#enable_at_startup = 1
@@ -59,16 +59,14 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "autocmd VimEnter * execute 'NERDTree'
 "silent! map <C-a> :NERDTreeFind<CR>
 "let g:NERDTreeMapActivateNode="<C-a>"
-"/**********end dein settings**********/"
+"/end dein settings/
 
-"NeoBundle Scripts-----------------------------
+"/NeoBundle Scripts/
 if &compatible
 	set nocompatible               " Be iMproved
 endif
-
 " Required:
 set runtimepath^=~/.vim/bundle/neobundle.vim/
-
 " Required:
 call neobundle#begin(expand('~/.vim/bundle'))
 
@@ -94,9 +92,13 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+"/End NeoBundle Scripts/
 
-"/**********begin permanently fixed**********/"
+
+
+
+
+"/begin permanently fixed/
 "挙動をvi互換ではなく,Vim のデフォルト設定にする
 set nocompatible
 " バックアップファイルを作らない
@@ -156,16 +158,16 @@ set laststatus=2
 set backspace=indent,eol,start
 "yyなどでヤンクしたものをブラウザで貼り付けとかできるように
 set clipboard=unnamed,autoselect
-"/**********end permanently fixed**********/"
+"/end permanently fixed/
 
-"/*****文字コードの設定*****/"
+"/文字コードの設定/
 "set fileencoding=utf-8 " 保存時の文字コード
 set fileencoding=utf-8
 "set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 
-"/*****検索機能設定*****/"
+"/検索機能設定/
 set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set smartcase " 検索文字列に大文字が含まれている場合は区別して検索する
 set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
@@ -174,7 +176,7 @@ set hlsearch " 検索語をハイライト表示
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
-"/*****コピペしたときに自動インデント機能がバグるのを防止*****/"
+"/コピペしたときに自動インデント機能がバグるのを防止/
 if &term =~ "xterm"
     let &t_SI .= "\e[?2004h"
     let &t_EI .= "\e[?2004l"
@@ -187,7 +189,7 @@ if &term =~ "xterm"
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-"/*****タブとインデント*****/"
+"/タブとインデント/
 " Tab文字を半角スペースにする
 "set expandtab
 set autoindent " 改行時に前の行のインデントを継続する
@@ -198,7 +200,7 @@ set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set smartindent " インデントはスマートインデント
 
-"/*****全角スペースをハイライト表示*****/"
+"/全角スペースをハイライト表示/
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
 endfunction
@@ -211,5 +213,5 @@ if has('syntax')
     call ZenkakuSpace()
 endif
 
-"verilog enabling jump between blocks"
+"/verilog enabling jump between blocks/
 :source $VIMRUNTIME/macros/matchit.vim
