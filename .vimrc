@@ -33,9 +33,6 @@ endif
   endif
 "/**********end dein Scripts**********/"
 
-
-
-
 "/**********begin dein settings**********/"
 " neocomplete and neosnippet settings"
 " Vim起動時にneocompleteを有効にする
@@ -63,9 +60,6 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "silent! map <C-a> :NERDTreeFind<CR>
 "let g:NERDTreeMapActivateNode="<C-a>"
 "/**********end dein settings**********/"
-
-
-
 
 "NeoBundle Scripts-----------------------------
 if &compatible
@@ -102,10 +96,6 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
-
-
-
-
 
 "/**********begin permanently fixed**********/"
 "挙動をvi互換ではなく,Vim のデフォルト設定にする
@@ -169,20 +159,12 @@ set backspace=indent,eol,start
 set clipboard=unnamed,autoselect
 "/**********end permanently fixed**********/"
 
-
-
-
-
 "/*****文字コードの設定*****/"
 "set fileencoding=utf-8 " 保存時の文字コード
 set fileencoding=utf-8
 "set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
-
-
-
-
 
 "/*****検索機能設定*****/"
 set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -192,10 +174,6 @@ set wrapscan " 検索時に最後まで行ったら最初に戻る
 set hlsearch " 検索語をハイライト表示
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
-
-
-
 
 "/*****コピペしたときに自動インデント機能がバグるのを防止*****/"
 if &term =~ "xterm"
@@ -210,10 +188,6 @@ if &term =~ "xterm"
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-
-
-
-
 "/*****タブとインデント*****/"
 " Tab文字を半角スペースにする
 "set expandtab
@@ -224,10 +198,6 @@ set shiftwidth=2 " 行頭でのTab文字の表示幅
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set smartindent " インデントはスマートインデント
-
-
-
-
 
 "/*****全角スペースをハイライト表示*****/"
 function! ZenkakuSpace()
