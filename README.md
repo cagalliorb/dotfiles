@@ -14,6 +14,12 @@ repository for dotfiles(.vimrc and related files.)
 
 2. `sh ./install.sh`
 
+### oh-my-zsh
+1. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+### zsh-completion
+1. `git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions`
+
 ### git clone
 1. `cd ~`
 2. `git clone https://github.com/cagalliorb/dotfiles`
