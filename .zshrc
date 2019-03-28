@@ -100,3 +100,4 @@ autoload -U compinit && compinit
 
 # ignore the same history command
 setopt hist_ignore_all_dups
+
