@@ -24,4 +24,5 @@ assuming the installation of zsh
 ### git clone
 1. `cd ~`
 2. `git clone https://github.com/cagalliorb/dotfiles`
-3. `sh dotfilesLink.sh`
+3. `tmux`
+4. `sh dotfilesLink.sh`
