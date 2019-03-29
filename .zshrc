@@ -108,3 +108,4 @@ HISTFILE=$HOME/.zsh-history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt share_history
+
