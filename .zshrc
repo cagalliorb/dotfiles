@@ -101,3 +101,10 @@ autoload -U compinit && compinit
 # ignore the same history command
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
+
+# save more history files
+export LANG=ja_JP.UTF-8
+HISTFILE=$HOME/.zsh-history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt share_history
