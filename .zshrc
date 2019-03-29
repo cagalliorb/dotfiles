@@ -109,5 +109,5 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 setopt share_history
 
-# change ls color
+# change ls clear color
 LS_COLORS=$LS_COLORS:'ow=30;42:' ; export LS_COLORS
