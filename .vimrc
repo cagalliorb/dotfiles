@@ -163,7 +163,7 @@ set clipboard=unnamed,autoselect
 "/文字コードの設定/
 "set fileencoding=utf-8 " 保存時の文字コード
 set fileencoding=utf-8
-"set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8 " 読み込み時の文字コードの自動判別. 左側が優先される
+set fileencodings=utf-8,sjis,iso-2022-jp,cp932,euc-jp " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 
