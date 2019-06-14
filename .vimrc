@@ -54,11 +54,25 @@ imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosni
 " vim-clang-format settings"
 autocmd FileType c ClangFormatAutoEnable
 autocmd FileType cpp ClangFormatAutoEnable
+let g:clang_format#code_style = 'Google'
+let g:clang_format#style_options = {
+\   "AlignConsecutiveAssignments": "true",
+\   "Cpp11BracedListStyle": "true",
+\   "DerivePointerAlignment": "false",
+\   "IndentCaseLabels": "true",
+\   "IndentWidth":     4,
+\   "KeepEmptyLinesAtTheStartOfBlocks": "true",
+\   "PointerAlignment": "Right",
+\   "SpacesBeforeTrailingComments": 1,
+\   "Standard":        "Cpp11",
+\   "TabWidth":        4,
+\   "UseTab":          "ForIndentation" }
 "nerdtree settings"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "autocmd VimEnter * execute 'NERDTree'
 "silent! map <C-a> :NERDTreeFind<CR>
 "let g:NERDTreeMapActivateNode="<C-a>"
+"
 "/end dein settings/
 
 "/NeoBundle Scripts/
